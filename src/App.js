@@ -31,9 +31,18 @@ function App() {
   // Array di città che compaiono nell'autocomplete e corrispondono alle città degli alertMap
   const cities = [
     {
-      id: 1,
+      id: 0,
       name: "Milano",
-      position: [45.4642, 9.1900],
+      position: [45.695000, 9.670000],
+      state: "Lombardia",
+      country: "Italy",
+      region: "Europe",
+      location: "Southern Europe"
+    },
+    {
+      id: 1,
+      name: "Bergamo",
+      position: [45.6931749, 9.625804],
       state: "Lombardia",
       country: "Italy",
       region: "Europe",
@@ -76,6 +85,7 @@ function App() {
       location: "Northern Europe"
     }
   ];
+
 
 
   // Array di oggetti di coordinate per i marker con le rispettive icone => Alert Map
@@ -246,7 +256,7 @@ function App() {
       }
     },
     {
-      position: [45.4734797727, 9.12118951524], // San Siro
+      position: [45.4766974, 9.1205017], // San Siro (inserito indirizzo del piazzale)
       info: {
         title: "Attacco a San Siro",
         category: "Security Alert",
@@ -259,8 +269,24 @@ function App() {
         iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
         file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
       }
+    },
+    {
+      position: [45.6692407, 9.7016651], // Areoporto Bergamo (inserito indirizzo)
+      info: {
+        title: "Attacco areoporto",
+        category: "Security Alert",
+        subCategory: "Terrorism",
+        typology: "Warning",
+        sector: "Security",
+        RiskLevel: "High",
+        eventData: "05-08-2024",
+        description: "Possibile attacco terroristico in prossimità della zona dell'areoporto di Bergamo.",
+        iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
+        file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
+      }
     }
   ];
+
 
 
   // Funziona usata senza autocomplete
