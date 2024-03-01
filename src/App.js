@@ -229,6 +229,36 @@ function App() {
         iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
         file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
       }
+    },
+    {
+      position: [40.779434, -73.963402], // New York museum
+      info: {
+        title: "Attacco al museo",
+        category: "Security Alert",
+        subCategory: "Terrorism",
+        typology: "Warning",
+        sector: "Security",
+        RiskLevel: "High",
+        eventData: "05-08-2024",
+        description: "Possibile attacco terroristico in prossimità della zona del museo.",
+        iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
+        file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
+      }
+    },
+    {
+      position: [45.4734797727, 9.12118951524], // San Siro
+      info: {
+        title: "Attacco a San Siro",
+        category: "Security Alert",
+        subCategory: "Terrorism",
+        typology: "Warning",
+        sector: "Security",
+        RiskLevel: "High",
+        eventData: "05-08-2024",
+        description: "Possibile attacco terroristico in prossimità della zona dello stadio San Siro.",
+        iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
+        file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
+      }
     }
   ];
 
@@ -266,7 +296,7 @@ function App() {
       console.log("data", data)
       // Estrai il nome della città dalla risposta e imposta lo stato della città
       if (data.results.length > 0) {
-        const cityName = data.results[0].components.city ? data.results[0].components.city : data.results[0].components.town;
+        const cityName = data.results[0].components.city ? data.results[0].components.city : data.results[0].components.town ? data.results[0].components.town : data.results[0].components.village;
         const continent = data.results[0].components.continent;
         setDataCity({ ...dataCity, pin: cityName, address_line2: continent });
       }
