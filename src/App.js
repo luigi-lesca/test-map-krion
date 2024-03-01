@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './App.css';
 import LocationMarker from './components/LocationMarker';
 import L from 'leaflet'; // Importa Leaflet per gestire le icone personalizzate
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 
 
 // Definisci l'icona predefinita
@@ -28,6 +28,7 @@ function App() {
 
   const API_KEY = "15a08997377e45a18329ad97763ac114";
 
+  // Array di città che compaiono nell'autocomplete e corrispondono alle città degli alertMap
   const cities = [
     {
       id: 1,
@@ -77,7 +78,7 @@ function App() {
   ];
 
 
-  // Array di oggetti di coordinate per i marker con le rispettive icone
+  // Array di oggetti di coordinate per i marker con le rispettive icone => Alert Map
   const markers = [
     {
       position: [40.779897, -73.968565],
@@ -232,11 +233,10 @@ function App() {
   ];
 
 
-
+  // Funziona usata senza autocomplete
   const handleSearch = async () => {
     try {
       let searchText = '';
-
       // Formatta la query dinamica sostituendo gli spazi con '+'
       searchText = dataCity.city.replace(/\s+/g, '+');
 
@@ -284,16 +284,7 @@ function App() {
   }
 
   // Funzione per gestire la ricerca nell'autocompletamento
-  const handleOnSearch = (string, results) => {
-    // const filteredResults = results.filter(city =>
-    //   city.name.toLowerCase().includes(string.trim().toLowerCase()) ||
-    //   city.region.toLowerCase().includes(string.trim().toLowerCase()) ||
-    //   city.country.toLowerCase().includes(string.trim().toLowerCase())
-    // );
-    // return filteredResults;
-  };
-
-
+  const handleOnSearch = (string, results) => { };
 
   // Funzione per gestire la selezione di una città dall'autocompletamento
   const handleSelect = (city) => {
