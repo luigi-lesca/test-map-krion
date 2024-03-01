@@ -286,7 +286,7 @@ function App() {
       }
     },
     {
-      position: [45.6101903, 9.2312117], // Beije (inserito indirizzo)
+      position: [45.6105158, 9.2333152], // Beije (inserito indirizzo)
       info: {
         title: "Attacco in corso...",
         category: "Security Alert",
