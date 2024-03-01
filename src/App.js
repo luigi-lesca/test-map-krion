@@ -32,7 +32,7 @@ function App() {
   const cities = [
     {
       id: 0,
-      name: "Milano",
+      name: "Bergamo",
       position: [45.695000, 9.670000],
       state: "Lombardia",
       country: "Italy",
@@ -41,8 +41,8 @@ function App() {
     },
     {
       id: 1,
-      name: "Bergamo",
-      position: [45.6931749, 9.625804],
+      name: "Milano",
+      position: [45.464664, 9.188540],
       state: "Lombardia",
       country: "Italy",
       region: "Europe",
@@ -281,6 +281,21 @@ function App() {
         RiskLevel: "High",
         eventData: "05-08-2024",
         description: "Possibile attacco terroristico in prossimità della zona dell'areoporto di Bergamo.",
+        iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
+        file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
+      }
+    },
+    {
+      position: [45.6101903, 9.2312117], // Beije (inserito indirizzo)
+      info: {
+        title: "Attacco in corso...",
+        category: "Security Alert",
+        subCategory: "Terrorism",
+        typology: "Warning",
+        sector: "Security",
+        RiskLevel: "High",
+        eventData: "05-08-2024",
+        description: "Possibile attacco terroristico in prossimità della zona della sede di Beije.",
         iconUrl: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/information/typologyicon-65df67ffd83e27019fa12734.png",
         file: "https://kriptia-dev.s3.eu-south-1.amazonaws.com/alert-map/alertmapfile-65e049bdd83e27019fa12796.pdf"
       }
